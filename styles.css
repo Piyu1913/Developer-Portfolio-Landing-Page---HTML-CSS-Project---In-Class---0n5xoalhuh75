@@ -1,158 +1,131 @@
-
-/* General Styles */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Hero Section */
-.hero-section {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
+html{
+    font-family: 'Lato', sans-serif;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
+.hero-section{
+    font-weight: 400;
+    background-image: url(https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
+@media screen and (max-width: 786px){
+    .hero-section{
+        min-height: 50vh;
+    }
 }
 
-.cta-btn {
-  background-color: #ff5733;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+.hero-section span{
+    font-size: small;
 }
 
-.cta-btn:hover {
-  background-color: #c13c29;
+.black-box{
+    width: 100vw;
+    background-color: #000;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    height: 25vh;
 }
 
-/* Black Box Section */
-.black-box {
-  background-color: #000;
-  color: white;
-  padding: 50px 20px;
-  text-align: center;
+.black-box h3{
+    font-size: 80px;
 }
 
-.black-box h2 {
-  font-size: 2rem;
+.black-box span{
+    font-size: 96px;
 }
 
-.black-box p {
-  font-size: 1.1rem;
-  margin-top: 20px;
+@media screen and (max-width: 786px){
+    .black-box>h3{
+        font-size: 24px;
+    }
+    .black-box h3 span{
+        font-size: 40px;
+    }
 }
 
-/* Card Container Section */
-.card-container {
-  padding: 50px 20px;
-  background-color: #f7f7f7;
-  text-align: center;
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
 }
 
-.card-container h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.cards {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.card {
-  background-color: white;
-  padding: 20px;
-  width: 280px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  background-color: #ff5733;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #c13c29;
-}
-
-/* Bottom Section */
-.bottom-section {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.bottom-section p {
-  font-size: 1rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .cards {
+/* Card Item */
+.grid-item {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
 }
 
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 80px 20px;
-  }
+/* Card Styling */
+.card {
+    max-width: 340px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 20px;
+}
 
-  .cta-btn {
-    font-size: 1rem;
-  }
+/* Card Image Styling */
+.card img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
 
-  .card-container h2 {
-    font-size: 2rem;
-  }
+/* Card Content Styling */
+.card-content h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
 
-  .card {
-    width: 100%;
-  }
+.card-content p{
+    display: block;
+    margin: 10px;
+}
 
-  .bottom-section p {
-    font-size: 0.9rem;
-  }
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+
+@media screen and (max-width: 786px){
+    .bottom{
+        flex-direction: column;
+    }
+}
+
+.contact{
+    width: 50%;
+    background-color: orange;
+    padding: 20px;
+    height: 30vh;
+    margin: 50px;
+}
+
+.about{
+    width: 50%;
+    background-color: green;
+    padding: 20px;
+    height: 30vh;
 }
